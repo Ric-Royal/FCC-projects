@@ -1,0 +1,470 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={ML Prediction with R},
+  pdfauthor={Author: Dickson Owuor (Ph.D.)},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{ML Prediction with R}
+\author{Author: Dickson Owuor (Ph.D.)}
+\date{30/06/2022}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{predictive-data-mining}{%
+\section{Predictive data mining}\label{predictive-data-mining}}
+
+Predictive data mining involves trying to use available data to predict
+a particular phenomenon on an unseen data set. Clustering and
+classification techniques are the most common predictive data mining
+methods.
+
+In this tutorial, we use the following libraries to allow us perform
+classification and clustering analysis:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://cran.r-project.org/web/packages/tree/index.html}{CRAN
+  tree library}: package provides functions for classification and
+  regression trees.
+\item
+  \href{https://cran.r-project.org/web/packages/ISLR/index.html}{CRAN
+  ISLR library}: package provides a collection of data sets.
+\end{itemize}
+
+\hypertarget{installation-of-libraries}{%
+\section{Installation of libraries}\label{installation-of-libraries}}
+
+Install and load the following package libraries.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Installing libraries}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"tree"}\NormalTok{)}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"ISLR"}\NormalTok{) }\CommentTok{\# for the Carseats data set}
+
+\CommentTok{\# Loading Libraries}
+\FunctionTok{library}\NormalTok{(cluster) }\CommentTok{\# for cluster{-}plot function}
+\FunctionTok{library}\NormalTok{(tree)}
+\FunctionTok{library}\NormalTok{(ISLR)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{usage-and-documentation}{%
+\section{Usage and documentation}\label{usage-and-documentation}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?kmeans}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{dealing-with-data-sets}{%
+\section{Dealing with data set(s)}\label{dealing-with-data-sets}}
+
+We can use the \textbf{data()} function to load or check available data
+sets provided by our installed libraries.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?data  }\CommentTok{\# check examples to understand usage}
+\FunctionTok{data}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{clustering}{%
+\section{Clustering}\label{clustering}}
+
+In clustering or cluster analysis in R, we attempt to group objects with
+similar traits and features together. In this tutorial, we focus on
+K-means clustering which is the most popular partitioning method. It
+requires the analyst to specify the number of clusters to extract.
+However, the biggest headache is determining the appropriate clusters to
+use.
+
+\hypertarget{load-data-set}{%
+\subsection{Load data set}\label{load-data-set}}
+
+We use the \textbf{mtcars} data set for our clustering analysis. The
+data set holds records of motor trend car road tests.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{data}\NormalTok{(mtcars)}
+\NormalTok{mydata }\OtherTok{\textless{}{-}}\NormalTok{ mtcars}
+
+\CommentTok{\# Checkout data set}
+\FunctionTok{head}\NormalTok{(mydata)}
+\FunctionTok{summary}\NormalTok{(mydata)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{cleaning-data-set}{%
+\subsection{Cleaning data set}\label{cleaning-data-set}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mydata }\OtherTok{\textless{}{-}} \FunctionTok{na.omit}\NormalTok{(mydata) }\CommentTok{\# listwise deletion of missing}
+\NormalTok{mydata }\OtherTok{\textless{}{-}} \FunctionTok{scale}\NormalTok{(mydata) }\CommentTok{\# standardize variables}
+\NormalTok{mydata }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(mydata) }\CommentTok{\# to remmove indexing error after scaling}
+
+\CommentTok{\# Use \textquotesingle{}Environment tab\textquotesingle{} to checkout data set easily}
+\FunctionTok{head}\NormalTok{(mydata)}
+\FunctionTok{ncol}\NormalTok{(mydata)}
+\FunctionTok{nrow}\NormalTok{(mydata)}
+\FunctionTok{colnames}\NormalTok{(mydata)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{scatter-plots}{%
+\subsection{Scatter plots}\label{scatter-plots}}
+
+We plot scatter plots to see the distribution of data points before
+clustering them into groups.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mydata}\SpecialCharTok{$}\NormalTok{wt }\CommentTok{\# load only data from column \textquotesingle{}wt\textquotesingle{}}
+\NormalTok{mydata[}\FunctionTok{c}\NormalTok{(}\StringTok{"wt"}\NormalTok{, }\StringTok{"mpg"}\NormalTok{)] }\CommentTok{\# load only data from columns \textquotesingle{}wt\textquotesingle{} and \textquotesingle{}mpg\textquotesingle{}}
+
+\CommentTok{\# 1. Scatter plots using plot() function}
+\NormalTok{?plot}
+\FunctionTok{plot}\NormalTok{(mydata}\SpecialCharTok{$}\NormalTok{wt, mydata}\SpecialCharTok{$}\NormalTok{mpg, }\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{ylab=}\StringTok{"Miles/(US) gallon"}\NormalTok{,}\AttributeTok{xlab=}\StringTok{"Weight (1000 lbs)"}\NormalTok{)}
+
+\CommentTok{\# 2. Scatter plots using cluspot() function}
+\NormalTok{?clusplot}
+\NormalTok{all }\OtherTok{\textless{}{-}} \FunctionTok{kmeans}\NormalTok{(mydata[}\FunctionTok{c}\NormalTok{(}\StringTok{"wt"}\NormalTok{, }\StringTok{"mpg"}\NormalTok{)], }\DecValTok{1}\NormalTok{) }\CommentTok{\# 1 cluster solution, to draw scatter plot}
+\FunctionTok{clusplot}\NormalTok{(mydata[}\FunctionTok{c}\NormalTok{(}\StringTok{"wt"}\NormalTok{, }\StringTok{"mpg"}\NormalTok{)], all}\SpecialCharTok{$}\NormalTok{cluster, }\AttributeTok{labels=}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{k-means-clustering}{%
+\subsection{K-Means clustering}\label{k-means-clustering}}
+
+We perform K-Means Cluster Analysis as follows. We manually set the
+number of clusters to 5.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{km }\OtherTok{\textless{}{-}} \FunctionTok{kmeans}\NormalTok{(mydata[}\FunctionTok{c}\NormalTok{(}\StringTok{"wt"}\NormalTok{, }\StringTok{"mpg"}\NormalTok{)], }\DecValTok{5}\NormalTok{) }\CommentTok{\# 5 cluster solution, based \textquotesingle{}wt\textquotesingle{} and \textquotesingle{}mpg\textquotesingle{} columns}
+\NormalTok{km}\SpecialCharTok{$}\NormalTok{cluster}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{plot-the-clusters}{%
+\subsection{Plot the clusters}\label{plot-the-clusters}}
+
+We can plot a graphs that reveals our 5 clusters using the
+\textbf{cluspot()} function as shown below.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Cluster Plot against 1st 2 principal components}
+\FunctionTok{clusplot}\NormalTok{(mydata[}\FunctionTok{c}\NormalTok{(}\StringTok{"wt"}\NormalTok{, }\StringTok{"mpg"}\NormalTok{)], km}\SpecialCharTok{$}\NormalTok{cluster, }\AttributeTok{color=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{shade=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{labels=}\DecValTok{2}\NormalTok{, }\AttributeTok{lines=}\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{classification}{%
+\section{Classification}\label{classification}}
+
+Decision tree is a type of supervised learning algorithm that can be
+used in both regression and classification problems. It works for both
+categorical and continuous input and output variables.
+
+This tutorial was adopted from:
+\href{https://www.datacamp.com/tutorial/decision-trees-R}{R Decision
+Trees Tutorial}
+
+\hypertarget{load-data-set-1}{%
+\subsection{Load data set}\label{load-data-set-1}}
+
+We use the \textbf{Carseats} data set for our classification tutorial.
+The data set records the Sales of Child Car Seats
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{data}\NormalTok{(Carseats)}
+\NormalTok{mydata }\OtherTok{\textless{}{-}}\NormalTok{ Carseats}
+\FunctionTok{head}\NormalTok{(mydata)}
+\FunctionTok{summary}\NormalTok{(data)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{creating-a-binary-variable}{%
+\subsection{Creating a binary
+variable}\label{creating-a-binary-variable}}
+
+Observe that \emph{Income} is a quantitative variable. In order to
+demonstrate the use of decision trees we convert it into a binary
+variable. It then becomes our \textbf{target/response} variable; we use
+the remaining variables/features as \textbf{predictor} variables.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{income\_cat }\OtherTok{\textless{}{-}} \FunctionTok{ifelse}\NormalTok{(mydata}\SpecialCharTok{$}\NormalTok{Income }\SpecialCharTok{\textless{}=} \DecValTok{68}\NormalTok{, }\StringTok{"Low"}\NormalTok{, }\StringTok{"High"}\NormalTok{)}
+\NormalTok{new\_data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(mydata, income\_cat)}
+\NormalTok{new\_data}\SpecialCharTok{$}\NormalTok{income\_cat }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(new\_data}\SpecialCharTok{$}\NormalTok{income\_cat) }\CommentTok{\# Take care of an error}
+\FunctionTok{head}\NormalTok{(new\_data)}
+\CommentTok{\# class(new\_data$income\_cat)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{splitting-train-and-test-data-sets}{%
+\subsection{Splitting train and test data
+sets}\label{splitting-train-and-test-data-sets}}
+
+We use the following function to split our original data set into 2 data
+sets: train data set and test data set.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{split\_data }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(data, }\AttributeTok{size =} \FloatTok{0.8}\NormalTok{, }\AttributeTok{train =} \ConstantTok{TRUE}\NormalTok{) \{}
+\NormalTok{  n\_row }\OtherTok{=} \FunctionTok{nrow}\NormalTok{(data)}
+\NormalTok{  total\_row }\OtherTok{=}\NormalTok{ size }\SpecialCharTok{*}\NormalTok{ n\_row}
+\NormalTok{  train\_sample }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{:}\NormalTok{ total\_row}
+  \ControlFlowTok{if}\NormalTok{ (train }\SpecialCharTok{==} \ConstantTok{TRUE}\NormalTok{) \{}
+    \FunctionTok{return}\NormalTok{ (data[train\_sample, ])}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{return}\NormalTok{ (data[}\SpecialCharTok{{-}}\NormalTok{train\_sample, ])}
+\NormalTok{  \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+We split the data set into 75\% train data set and remaining 25\% for
+test data set.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Split data set}
+\NormalTok{train\_data }\OtherTok{\textless{}{-}} \FunctionTok{split\_data}\NormalTok{(new\_data, }\FloatTok{0.75}\NormalTok{, }\AttributeTok{train =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{test\_data }\OtherTok{\textless{}{-}} \FunctionTok{split\_data}\NormalTok{(new\_data, }\FloatTok{0.75}\NormalTok{, }\AttributeTok{train =} \ConstantTok{FALSE}\NormalTok{)}
+\FunctionTok{dim}\NormalTok{(train\_data)}
+\FunctionTok{dim}\NormalTok{(test\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{train-the-decision-tree-model}{%
+\subsection{Train the decision tree
+model}\label{train-the-decision-tree-model}}
+
+We train our model to predict \textbf{income\_cat} from the remaining
+features.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Train model}
+\NormalTok{?tree}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{101}\NormalTok{)}
+\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{tree}\NormalTok{(income\_cat}\SpecialCharTok{\textasciitilde{}}\NormalTok{.}\SpecialCharTok{{-}}\NormalTok{Income, }\AttributeTok{data =}\NormalTok{ train\_data)}
+\FunctionTok{summary}\NormalTok{(model)}
+\CommentTok{\# income\_cat is the target/response feature/variable}
+\CommentTok{\# all other features are predictor variables (except Income since income\_cat was created from it)}
+\CommentTok{\# formula 1: income\_cat \textasciitilde{}. {-} Income (NB: . means all remaining features)}
+\CommentTok{\# formula 2: income\_cat \textasciitilde{} Sales + CompPrice + Advertising + ... + US}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(model)}
+\FunctionTok{text}\NormalTok{(model, }\AttributeTok{pretty=}\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{testing-the-model-on-test-data-set}{%
+\subsection{Testing the model on test data
+set}\label{testing-the-model-on-test-data-set}}
+
+We test the model to predict values of \textbf{income\_cat} on the
+unseen test data set. We construct a confusion matrix to show the
+performance of the model.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Test model by prediction on test\_data}
+\NormalTok{?predict}
+\NormalTok{pred\_unseen }\OtherTok{=} \FunctionTok{predict}\NormalTok{(model, test\_data, }\AttributeTok{type=}\StringTok{"class"}\NormalTok{)}
+\FunctionTok{with}\NormalTok{(test\_data, }\FunctionTok{table}\NormalTok{(income\_cat, pred\_unseen))}
+\CommentTok{\# OR }
+\NormalTok{conf\_mat }\OtherTok{\textless{}{-}} \FunctionTok{table}\NormalTok{(test\_data}\SpecialCharTok{$}\NormalTok{income\_cat, pred\_unseen)}
+\NormalTok{conf\_mat}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{measuring-performance}{%
+\subsection{Measuring performance}\label{measuring-performance}}
+
+The confusion matrix is a better choice to evaluate the classification
+performance. The general idea is to count the number of times True
+instances are classified are False and populate them in a confusion
+matrix as illustrated in the figure below.
+
+\begin{figure}
+\centering
+\includegraphics{img/confusion_matrix.png}
+\caption{Fig. 1: An example of a confusion matrix}
+\end{figure}
+
+The confusion matrix can be used to compute the accuracy, precision and
+recall of the model, as illustrated in the figure below.
+
+\begin{figure}
+\centering
+\includegraphics{img/compute.jpeg}
+\caption{Fig. 2: Computing performance values}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{accuracy }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(}\FunctionTok{diag}\NormalTok{(conf\_mat)) }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(conf\_mat)}
+\CommentTok{\# precision \textless{}{-} (17+35) / 100}
+\CommentTok{\# recal \textless{}{-} (22+35) / 100}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{questions}{%
+\section{Questions}\label{questions}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Which techniques can be used to determine the appropriate number of
+  clusters?
+\item
+  How can you modify the cluster analysis on data set \textbf{mtcars};
+  so that, the grouping is based on all the features?
+\item
+  How can you modify the formula of the \textbf{tree()} function; so
+  that, we build a model that classifies the \emph{income\_cat} variable
+  using only \textbf{Sales, CompPrice, Advertising, Education} features?
+\end{enumerate}
+
+\hypertarget{exercise}{%
+\section{Exercise}\label{exercise}}
+
+This exercise is an assignment and you are required to:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Perform cluster analysis involving features ``hp'', ``gear'' and
+  ``vs'' of data set \textbf{mtcars}.
+\item
+  In your cluster analysis, which car models seem to share the most
+  characteristics?
+\item
+  Implement a classification model that uses \textbf{Sales} variable as
+  the target variable.
+\item
+  What is the accuracy, precision and recall of your classification
+  model?
+\end{enumerate}
+
+\end{document}

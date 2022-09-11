@@ -1,0 +1,67 @@
+---
+title: "webscraping_ass"
+author: "Richard Kabiru"
+date: '2022-07-24'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r eval=FALSE}
+east_pop<-read_html("https://www.worldometers.info/world-population/eastern-africa-population/#:~:text=The%20current%20population%20of%20Eastern,among%20subregions%20ranked%20by%20Population.")
+
+```
+```
+# Get the movie charts from wikipedia url using html_table function
+east_africa <- html_table(east_pop)
+
+east_africa[[3]]
+```
+
+
+# Put the safaricom shares into a data frame
+east_africa_df <- data.frame(east_africa[[3]])
+east_africa_df
+
+# Numbers of rows and columns
+dim(east_africa_df)
+
+# converting data frame into a csv and saving it on the working directory
+getwd()
+setwd("C:/Users/Rick-Royal/Documents")
+
+write.csv(east_africa_df, "east_africa.csv", row.names = TRUE)
+```
+
+# Questions
+1. Data output methods - write.csv
+2. Structured data. The data is organized in rows and columns 
+3. Full extraction: the data is completely extracted from the source – Whatever is available, all of that is completely extracted.
+4. Offline extraction: Data is not extracted from the
+source system but is staged explicitly outside the
+original source system.
+5. The data is extracted from a website in this case kwayis.org.
+The data is then Transformed from a tibble to a dataframe.
+The data is then loaded onto the system by converting and saving it into a csv file.
